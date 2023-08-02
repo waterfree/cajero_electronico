@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Esto es bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/home.css" />
+
+    <title>DEV-BANK</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">DEV-BANK</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Seguridad</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pagos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Facturas</a></li>
+                  <li><a class="dropdown-item" href="#">TC</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Creditos</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Solicitud de productos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="user-info"></div>
+      <div class="tarjet">
+        <div class="container">
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <div class="icon">
+                  <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                  <p
+                    class="p-3 fw-bolder fs-1 border border-white border-5 rounded-pill position-absolute top-50 start-50 translate-middle text-black-50"
+                  >
+                    Saldo
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <h3>
+                  <p>Su saldo actual es:</p>
+                </h3>
+                <div id="user-money"></div>
+                <p>
+                  Recuerde que tiene un credito disponible, por favor
+                  comuniquese con nosotros.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <div class="icon">
+                  <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                  <p
+                    class="p-3 fw-bolder fs-1 border border-white border-5 rounded-pill position-absolute top-50 start-50 translate-middle text-black-50"
+                  >
+                    Consignar
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <h3>
+                  <p>¿Cuanto dinero desea consignar?</p>
+                </h3>
+                  <div id="consign-money">
+                    <div class="input-group mb-3">
+                      <button type="button" id="btn-consignar" class="btn btn-outline-info">Consignar</button>
+                      <span class="input-group-text">$</span>
+                      <input id="check-consignar" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                    </div>
+                  </div>
+                <p>
+                  Tiene una TC disponible, comuniquese con nosotros
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <div class="icon">
+                  <i class="fa fa-github-square" aria-hidden="true"></i>
+                  <p
+                    class="p-3 fw-bolder fs-1 border border-white border-5 rounded-pill position-absolute top-50 start-50 translate-middle text-black-50"
+                  >
+                    Retirar
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <h3>
+                <p>¿Cuanto dinero desea retirar?</p>
+                </h3>
+                <div id="remove-money">
+                  <div class="input-group mb-3">
+                    <button type="button" id="btn-retirar" class="btn btn-outline-info">Retirar</button>
+                    <span class="input-group-text">$</span>
+                    <input id="check-retirar" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                  </div>
+                </div>
+                <p>Use cada uno de nuestros puntos de retiro con tranquilidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+        <button id="btn-logout" type="button" class="btn btn-danger">Cerrar sesion</button>
+    </footer>
+  </body>
+  <!--Esto es bootstrap-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+  <!--Script propio-->
+  <script src="./controllers/home.js"></script>
+</html>
